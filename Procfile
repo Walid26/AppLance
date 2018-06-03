@@ -1,1 +1,1 @@
-web: gunicorn applance.wsgi
+web: gunicorn applance.py
