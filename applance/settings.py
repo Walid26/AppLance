@@ -154,3 +154,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'applance1@gmail.com'
 EMAIL_HOST_PASSWORD = 'Caml2018;;'
 EMAIL_PORT = 587
+
+DATABASES = { 'default': dj_database_url.config() }
