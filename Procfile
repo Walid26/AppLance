@@ -1,1 +1,1 @@
-web: gunicorn applance.wsgi.py
+web: gunicorn applance.wsgi.py --log-file=-
