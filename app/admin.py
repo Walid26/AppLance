@@ -7,7 +7,7 @@ from django.contrib.auth.admin import UserAdmin
 
 class RequeteAdmin(admin.ModelAdmin):
 	list_display   = ('titreRequete', 'demandeurRequete', 'dateRequete', 'remunerationRequete','apercu_texte')
-	list_filter    = ('demandeurRequete','categorieRequete','statutRequete')
+	list_filter    = ('demandeurRequete','statutRequete')
 	date_hierarchy = 'dateRequete'
 	ordering       = ('dateRequete',)
 	search_fields  = ('titreRequete', 'texteRequete')
