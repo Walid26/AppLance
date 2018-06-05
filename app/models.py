@@ -10,7 +10,7 @@ categories = (('0','Aide physique'),('1','Informatique'), ('2','Transport'))
 class Utilisateur(AbstractUser):
 	sexeUtilisateur = models.CharField(max_length=42, default="Masculin", choices=sexeUtilisateur, verbose_name="Sexe")
 	fiabiliteUtilisateur = models.FloatField(default=0.0, verbose_name="Fiabilité")
-	zoneUtilisateur = models.ForeignKey('ZoneGeographique', null=True, blank=True, on_delete=models.CASCADE, verbose_name="Région")
+	zoneUtilisateur = models.ForeignKey('ZoneGeographique', on_delete=models.CASCADE, verbose_name="Région")
 
 	def __str__(self):
 		return self.username
