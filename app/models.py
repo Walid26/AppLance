@@ -59,7 +59,7 @@ class CategorieRequete(models.Model):
 class SuiviRequete(models.Model):
 	idSuiviRequete = models.AutoField(primary_key=True)
 	requeteSuiviRequete = models.ForeignKey('Requete', on_delete=models.CASCADE, verbose_name="Titre de la requête")
-	satisfactionSuiviRequete = models.CharField(max_length=1, choices=satisfactionSuiviRequete, verbose_name="Satisfaction")
+	satisfactionSuiviRequete = models.CharField(max_length=42, choices=satisfactionSuiviRequete, verbose_name="Satisfaction")
 	commentaireSuiviRequete = models.TextField(verbose_name="Commentaires")
 
 	class Meta:
