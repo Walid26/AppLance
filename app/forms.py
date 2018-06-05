@@ -15,7 +15,7 @@ class UtilisateurChangeForm(UserChangeForm):
 class RequeteForm(forms.ModelForm):
 	class Meta:
 		model = Requete
-		fields = ['titreRequete', 'categorieRequete', 'remunerationRequete', 'statutRequete', 'texteRequete', 'repondeurRequete']
+		fields = ['titreRequete', 'remunerationRequete', 'statutRequete', 'texteRequete', 'repondeurRequete']
 
 class SuiviRequeteForm(forms.ModelForm):
 	class Meta:
