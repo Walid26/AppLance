@@ -35,7 +35,7 @@ class Requete(models.Model):
 	texteRequete = models.TextField(verbose_name="Texte")
 	remunerationRequete = models.IntegerField(verbose_name="Rémunération")
 	statutRequete = models.CharField(max_length=42, choices=typeStatutRequete,default="Disponible", verbose_name="Statut")
-	categorieRequete = models.ForeignKey('CategorieRequete', on_delete=models.CASCADE, verbose_name="Catégorie")
+	categorieRequete = models.ForeignKey('CategorieRequete', null=True, blank=True, on_delete=models.CASCADE, verbose_name="Catégorie")
 	demandeurRequete = models.ForeignKey('Utilisateur', null=True, blank=True, on_delete=models.CASCADE, related_name='idDemandeurRequete', verbose_name="Pseudo demandeur")
 	repondeurRequete = models.ForeignKey('Utilisateur', null=True, blank=True, on_delete=models.CASCADE, related_name='idRepondeurRequete', verbose_name="Pseudo Répondeur")
 
