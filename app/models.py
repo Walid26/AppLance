@@ -8,7 +8,7 @@ sexeUtilisateur = (('0','Masculin'),('1','Feminin'))
 
 class Utilisateur(AbstractUser):
 	sexeUtilisateur = models.CharField(max_length=1, default="Masculin", choices=sexeUtilisateur, verbose_name="Sexe")
-	fiabiliteUtilisateur = models.IntegerField(default=0, verbose_name="Fiabilité")
+	fiabiliteUtilisateur = models.IntegerField(default=int(0), verbose_name="Fiabilité")
 	zoneUtilisateur = models.ForeignKey('ZoneGeographique', null=True, blank=True, on_delete=models.CASCADE, verbose_name="Région")
 
 	def __str__(self):
