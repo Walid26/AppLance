@@ -5,7 +5,7 @@ from django.utils import timezone
 typeStatutRequete = (('Disponible','Disponible'),('Suspendue','Suspendue'),('Clôturée','Clôturée'))
 satisfactionSuiviRequete = (('0','Satisfait'),('1','Insatisfait'))
 sexeUtilisateur = (('0','Masculin'),('1','Feminin'))
-categories = (('0','Physique'),('1','Informatique'))
+categories = (('0','Aide physique'),('1','Informatique'), ('2','Transport'))
 
 class Utilisateur(AbstractUser):
 	sexeUtilisateur = models.CharField(max_length=42, default="Masculin", choices=sexeUtilisateur, verbose_name="Sexe")
@@ -49,7 +49,7 @@ class Requete(models.Model):
 
 class CategorieRequete(models.Model):
 	idCategorieRequete = models.AutoField(primary_key=True)
-	nomCategorieRequete = models.CharField(max_length=100, verbose_name="Nom de la catégorie")
+	nomCategorieRequete = models.CharField(max_length=100, choices = categories, verbose_name="Nom de la catégorie")
 
 	def __str__(self):
 		return self.nomCategorieRequete
